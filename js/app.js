@@ -1,6 +1,12 @@
-define(function (require, exports) {
+define(function (require) {
   var calculator = require('calculator');
-  var result = calculator.add(1, 2);
 
-  console.log(result);
+  var app = {
+    run: function () {
+      var result = calculator.add(1, 2);
+      console.log(result);
+    }
+  };
+ 
+  return app;
 });

@@ -1,7 +1,17 @@
 <html>
-<head>
-  <script data-main="js/app" src="js/vendor/requirejs/require.js"></script>
-</head>
-<body>
-</body>
+  <head>
+    <title>Modular JS Demo</title>
+  </head>
+  <body>
+    <script src="js/vendor/requirejs/require.js"></script>   
+    <script>
+      require.config({
+        baseUrl: 'js'
+      });
+
+      require(['app'], function (app){
+        app.run();
+      });
+    </script>
+  </body>
 </html>
