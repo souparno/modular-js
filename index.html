@@ -3,10 +3,14 @@
     <title>Modular JS Demo</title>
   </head>
   <body>
+    <div id='echo'></div>
     <script src="js/vendor/requirejs/require.js"></script>   
     <script>
       require.config({
-        baseUrl: 'js'
+        baseUrl: 'js',
+        paths:{
+          jquery: 'vendor/jquery/dist/jquery.min'
+        }
       });
 
       require(['app'], function (app){
